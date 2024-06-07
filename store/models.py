@@ -6,7 +6,7 @@ class Promotion(models.Model):
     discount = models.FloatField()
 class Collection(models.Model):
     title = models.CharField(max_length=255)
-    feature_product = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True, related_name='+')
+    feature_product = models.ForeignKey('store.Product', on_delete=models.SET_NULL, null=True, related_name='+')
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
